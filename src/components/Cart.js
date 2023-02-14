@@ -2,7 +2,7 @@ import React from 'react'
 import { useCart } from 'react-use-cart'
 
 const Cart = () => {
-    const { isEmpty, items,cartTotal, updateItemQuantity,removeItem} = useCart();
+    const { isEmpty, items,cartTotal, updateItemQuantity} = useCart();
 
     if (isEmpty) return <h1 className='text-center'>Your cart is Empty</h1>
 
@@ -20,10 +20,7 @@ const Cart = () => {
                                 return (
                                     
                                     <tr style={{ alignItems: "center" }} key={index}>
-
-
-
-                                        
+   
                                         <td>{item.name}</td>
 
                                         <td> {item.quantity}</td>
